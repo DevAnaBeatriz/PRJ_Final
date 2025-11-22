@@ -73,7 +73,7 @@ set JWT_SECRET=uma_chave_bem_grande_para_jwt_256bits
 
 ---
 
-## 🐳 Execução com Docker
+## Execução com Docker
 
 ### Gere os JARs
 ```bash
@@ -122,24 +122,6 @@ Rodar:
 ```bash
 ./mvnw test
 ```
-
----
-
-
-## 📝 Checklist contra Perda de Pontos
-
-✔ Pasta raiz correta  
-✔ Arquitetura limpa real (domain/usecase/port/adapter/web/config)  
-✔ Sem `@Autowired` em campos (apenas construtor)  
-✔ Entidade desacoplada do ORM (User vs UserEntity)  
-✔ API versionada  
-✔ JWT configurado com variável de ambiente  
-✔ Gateway expõe porta, login-app não  
-✔ Seed com usuário aluno/senha123 (BCrypt)  
-✔ Testes incluídos  
-✔ Dockerfile para cada microserviço  
-✔ docker-compose apontando para cada serviço pelo nome  
-✔ README completo explicando decisões  
 
 ---
 
