@@ -1,0 +1,17 @@
+E:\modulo22\modulo2\login-app\src\main\java\com\modulo2\loginapp\adapter\persistence\JpaUserRepository.java
+E:\modulo22\modulo2\login-app\src\main\java\com\modulo2\loginapp\adapter\persistence\SpringDataUserRepo.java
+E:\modulo22\modulo2\login-app\src\main\java\com\modulo2\loginapp\web\dto\LoginRequest.java
+E:\modulo22\modulo2\login-app\src\main\java\com\modulo2\loginapp\config\SecurityConfig.java
+E:\modulo22\modulo2\login-app\src\main\java\com\modulo2\loginapp\web\JwtAuthenticationFilter.java
+E:\modulo22\modulo2\login-app\src\main\java\com\modulo2\loginapp\usecase\JwtService.java
+E:\modulo22\modulo2\login-app\src\main\java\com\modulo2\loginapp\usecase\AuthService.java
+E:\modulo22\modulo2\login-app\src\main\java\com\modulo2\loginapp\usecase\LoadUserByUsernameUseCase.java
+E:\modulo22\modulo2\login-app\src\main\java\com\modulo2\loginapp\domain\User.java
+E:\modulo22\modulo2\login-app\src\main\java\com\modulo2\loginapp\web\dto\LoginResponse.java
+E:\modulo22\modulo2\login-app\src\main\java\com\modulo2\loginapp\web\UserPrincipal.java
+E:\modulo22\modulo2\login-app\src\main\java\com\modulo2\loginapp\config\AppConfig.java
+E:\modulo22\modulo2\login-app\src\main\java\com\modulo2\loginapp\adapter\persistence\UserEntity.java
+E:\modulo22\modulo2\login-app\src\main\java\com\modulo2\loginapp\port\UserRepository.java
+E:\modulo22\modulo2\login-app\src\main\java\com\modulo2\loginapp\LoginAppApplication.java
+E:\modulo22\modulo2\login-app\src\main\java\com\modulo2\loginapp\web\AuthController.java
+E:\modulo22\modulo2\login-app\src\main\java\com\modulo2\loginapp\config\DataSeed.java

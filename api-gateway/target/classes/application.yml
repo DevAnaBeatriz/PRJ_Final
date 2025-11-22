@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    gateway:
+      default-filters:
+        - RemoveRequestHeader=Cookie
+      routes:
+        - id: auth_route
+          uri: http://login-app:8080
+          predicates:
+            - Path=/api/v1/auth/**
+          filters:
+            - StripPrefix=0
+
+        - id: api_route
+          uri: http://login-app:8080
+          predicates:
+            - Path=/api/v1/api/**
+          filters:
+            - StripPrefix=0

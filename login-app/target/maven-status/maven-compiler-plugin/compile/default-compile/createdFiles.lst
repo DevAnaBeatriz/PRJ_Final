@@ -1,0 +1,17 @@
+com\modulo2\loginapp\usecase\AuthService.class
+com\modulo2\loginapp\domain\User.class
+com\modulo2\loginapp\port\UserRepository.class
+com\modulo2\loginapp\adapter\persistence\UserEntity.class
+com\modulo2\loginapp\web\JwtAuthenticationFilter.class
+com\modulo2\loginapp\LoginAppApplication.class
+com\modulo2\loginapp\adapter\persistence\SpringDataUserRepo.class
+com\modulo2\loginapp\web\dto\LoginRequest.class
+com\modulo2\loginapp\web\dto\LoginResponse.class
+com\modulo2\loginapp\adapter\persistence\JpaUserRepository.class
+com\modulo2\loginapp\web\AuthController.class
+com\modulo2\loginapp\usecase\JwtService.class
+com\modulo2\loginapp\usecase\LoadUserByUsernameUseCase.class
+com\modulo2\loginapp\config\SecurityConfig.class
+com\modulo2\loginapp\web\UserPrincipal.class
+com\modulo2\loginapp\config\AppConfig.class
+com\modulo2\loginapp\config\DataSeed.class
