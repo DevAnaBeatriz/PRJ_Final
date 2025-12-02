@@ -42,9 +42,6 @@ Acesse Graylog via `http://localhost:9000` (as credenciais padrão estão no doc
   <img src="https://github.com/DevAnaBeatriz/PRJ_Final/blob/modulo01/graylogfuncionando.png"  />
 </div>
 
-## Testes e CI
-Incluí um workflow do GitHub Actions (`.github/workflows/build.yml`) que faz build e executa testes.
-
 ## Observações
 - `application.yml` lê variáveis de ambiente (DB_HOST, DB_PORT, DB_USER, DB_PASS, DB_NAME, GRAYLOG_HOST, GRAYLOG_PORT).
 
