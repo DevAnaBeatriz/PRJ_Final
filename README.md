@@ -38,6 +38,10 @@ curl -X POST http://localhost:8080/api/pessoas -H "Content-Type: application/jso
 ## Graylog
 Acesse Graylog via `http://localhost:9000` (as credenciais padrão estão no docker-compose, mas o login é admin e a senha é admin123). Logs são enviados via GELF para host `graylog` na porta `12201` conforme `logback-spring.xml`.
 
+<div align="center">
+  <img src="https://github.com/DevAnaBeatriz/PRJ_Final/blob/modulo01/graylogfuncionando.png"  />
+</div>
+
 ## Testes e CI
 Incluí um workflow do GitHub Actions (`.github/workflows/build.yml`) que faz build e executa testes.
 
