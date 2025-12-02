@@ -43,4 +43,4 @@ Incluí um workflow do GitHub Actions (`.github/workflows/build.yml`) que faz bu
 
 ## Observações
 - `application.yml` lê variáveis de ambiente (DB_HOST, DB_PORT, DB_USER, DB_PASS, DB_NAME, GRAYLOG_HOST, GRAYLOG_PORT).
-- Para desenvolvimento rápido, `spring.jpa.hibernate.ddl-auto=update`.
+
