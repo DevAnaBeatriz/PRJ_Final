@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true">
+
+  <property name="GRAYLOG_HOST" value="${gelf.host:-graylog}" />
+  <property name="GRAYLOG_PORT" value="${gelf.port:-12201}" />
+
+  <appender name="GELF" class="biz.paluch.logging.gelf.logback.GelfLogbackAppender">
+    <host>${GRAYLOG_HOST}</host>
+    <port>${GRAYLOG_PORT}</port>
+    <version>1.1</version>
+    <facility>modulo1</facility>
+    <extractStackTrace>true</extractStackTrace>
+    <filterStackTrace>true</filterStackTrace>
+    <includeFullMdc>true</includeFullMdc>
+    <includeLoggerName>true</includeLoggerName>
+    <compressionType>GZIP</compressionType>
+  </appender>
+
+  <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <root level="INFO">
+    <appender-ref ref="GELF"/>
+    <appender-ref ref="CONSOLE"/>
+  </root>
+</configuration>

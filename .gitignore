@@ -1,0 +1,13 @@
+/target
+*.jar
+*.war
+*.iml
+/.idea
+/.settings
+/.project
+/.classpath
+.mvn/wrapper/maven-wrapper.jar
+.vscode
+.DS_Store
+.env
+/*.zip

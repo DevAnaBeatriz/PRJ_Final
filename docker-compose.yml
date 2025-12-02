@@ -1,0 +1,66 @@
+services:
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: modulo1
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./init-db:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.10
+    environment:
+      - discovery.type=single-node
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+
+  mongo:
+    image: mongo:6
+    volumes:
+      - mongodata:/data/db
+
+  graylog:
+    image: graylog/graylog:5.0
+    environment:
+      GRAYLOG_PASSWORD_SECRET: somepasswordpepper
+      GRAYLOG_ROOT_PASSWORD_SHA2: 240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9
+      #login: admin senha: admin123
+      GRAYLOG_HTTP_EXTERNAL_URI: http://127.0.0.1:9000/
+    depends_on:
+      - mongo
+      - elasticsearch
+    ports:
+      - "9000:9000"
+      - "12201:12201/udp"
+      - "12201:12201/tcp"
+
+
+  app:
+    build: .
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: modulo1
+      DB_USER: postgres
+      DB_PASS: postgres
+      GRAYLOG_HOST: graylog
+      GRAYLOG_PORT: 12201
+    depends_on:
+      - postgres
+      - graylog
+    ports:
+      - "8080:8080"
+
+volumes:
+  pgdata:
+  esdata:
+  mongodata:

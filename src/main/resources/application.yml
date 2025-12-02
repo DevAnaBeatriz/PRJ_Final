@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:postgres}:${DB_PORT:5432}/${DB_NAME:modulo1}
+    username: ${DB_USER:postgres}
+    password: ${DB_PASS:postgres}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+
+logging:
+  level:
+    root: INFO
+
+gelf:
+  host: ${GRAYLOG_HOST:graylog}
+  port: ${GRAYLOG_PORT:12201}
