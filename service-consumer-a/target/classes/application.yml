@@ -1,0 +1,5 @@
+spring:
+  kafka:
+    bootstrap-servers: ${SPRING_KAFKA_BOOTSTRAP_SERVERS:kafka1:9092,kafka2:9093,kafka3:9094}
+
+KAFKA_TOPIC: ${KAFKA_TOPIC:modulo4-topic}
