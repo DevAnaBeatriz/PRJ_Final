@@ -17,10 +17,10 @@ def get_consumer(group_id: str = "modulo3-group"):
         auto_offset_reset='earliest',
         enable_auto_commit=True,
         group_id=group_id,
-        consumer_timeout_ms=1000,  # will allow to stop iterating when no messages
+        consumer_timeout_ms=1000,  
     )
 
-    # If username/password provided, try SASL_PLAINTEXT
+   
     if username and password:
         logger.info("Configurando SASL/PLAIN com usuário fornecido (KAFKA_USERNAME).")
         sasl = {

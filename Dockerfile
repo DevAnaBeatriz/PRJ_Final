@@ -3,7 +3,6 @@ FROM python:3.11-slim
 ENV PYTHONUNBUFFERED=1
 WORKDIR /app
 
-# system deps (for kafka-python no heavy deps required)
 RUN apt-get update && apt-get install -y --no-install-recommends git build-essential && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt /app/requirements.txt

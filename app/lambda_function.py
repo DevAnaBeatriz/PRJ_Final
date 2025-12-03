@@ -13,7 +13,7 @@ def lambda_handler(event, context):
     consumed = 0
     timeout_seconds = 5
     try:
-        # consumer is iterable; we'll poll messages até timeout
+        # consumer is iterable;  poll messages até timeout
         for msg in consumer:
             try:
                 value = msg.value.decode('utf-8') if isinstance(msg.value, (bytes, bytearray)) else str(msg.value)
