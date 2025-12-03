@@ -1,0 +1,14 @@
+.git
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+.env
+*.pem
+*.key
+secrets.*
+.modulo3.zip
+.modulo3
+.DS_Store
