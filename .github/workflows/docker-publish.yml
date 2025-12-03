@@ -2,7 +2,7 @@ name: Build and Publish Docker image
 
 on:
   push:
-    branches: [ main ]
+    branches: [ "modulo03" ]
 
 jobs:
   build-and-push:
